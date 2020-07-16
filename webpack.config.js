@@ -14,5 +14,16 @@ module.exports = {
 	//在webpack4里，预定大于配置，约定的打包入口是src->index.js
 	plugins: [
 		htmlPlugin
-	]
+	],
+	module: { //所有第三方模块的配置
+		rules: [ //第三方匹配规则
+			{ test: /\.js|jsx$/, use: 'babel-loader', exclude:/node_modules/ },
+		]
+	},
+	resolve:{
+		extensions: ['.js', '.jsx', '.json'], //可以省略不写
+		alias: {
+			'@': path.join(__dirname, './src')
+		}
+	}
 }
