@@ -7,6 +7,7 @@ npm init -y <br/>
 npm install webpack webpack-cli webpack-dev-server -D <br/>
 npm install html-webpack-plugin -D <br/>
 npm install react react-dom -S <br/>
+npm i babel-core babel-loader babel-plugin-transform-runtime -D <br/>
 
 run: <br/>
 npm run dev <br/>
